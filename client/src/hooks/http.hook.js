@@ -8,7 +8,7 @@ export const useHttp = () => {
         async (url, method = 'GET', body = null, headers = {}) => {
             setLoading(true);
             try {
-                if (body){
+                if (body) {
                     body = JSON.stringify(body);
                     headers['Content-Type'] = 'application/json';
                 }
@@ -36,7 +36,7 @@ export const useHttp = () => {
         []
     );
 
-    const clearError = () => setError(null);
+    const clearError = useCallback(() => setError(null), []);
 
     return { loading, request, error, clearError };
 };
