@@ -8,7 +8,7 @@
     "server": "nodemon app.js",
     "client": "yarn --cwd client start",
     "dev": "cross-env NODE_ENV=development concurrently \"yarn server\" \"yarn client\"",
-    "client:install": "yarn --cwd client",
+    "client:install": "yarn --cwd client add",
     "client:build": "yarn --cwd client build"
   },
   "keywords": [
