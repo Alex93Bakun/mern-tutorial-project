@@ -10,7 +10,7 @@ router.post('/generate', auth, async (req, res) => {
         const baseUrl = config.get('baseUrl');
         const { from } = req.body;
 
-        code = shortid.generate();
+        const code = shortid.generate();
 
         const existing = await Link.findOne({ from });
 
@@ -32,7 +32,7 @@ router.post('/generate', auth, async (req, res) => {
         res.status(201).json({ link });
     } catch (e) {
         res.status(500).json({
-            message: 'Something went wrong, try again',
+            message: 'Что-то пошло не так, попробуйте снова',
         });
     }
 });
@@ -43,7 +43,7 @@ router.get('/', auth, async (req, res) => {
         res.json(links);
     } catch (e) {
         res.status(500).json({
-            message: 'Something went wrong, try again',
+            message: 'Что-то пошло не так, попробуйте снова',
         });
     }
 });
@@ -54,7 +54,7 @@ router.get('/:id', auth, async (req, res) => {
         res.json(link);
     } catch (e) {
         res.status(500).json({
-            message: 'Something went wrong, try again',
+            message: 'Что-то пошло не так, попробуйте снова',
         });
     }
 });
