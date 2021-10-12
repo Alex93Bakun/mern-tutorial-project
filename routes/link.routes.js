@@ -32,7 +32,7 @@ router.post('/generate', auth, async (req, res) => {
         res.status(201).json({ link });
     } catch (e) {
         res.status(500).json({
-            message: 'Что-то пошло не так, попробуйте снова',
+            message: 'Something went wrong, please try again.',
         });
     }
 });
@@ -43,7 +43,7 @@ router.get('/', auth, async (req, res) => {
         res.json(links);
     } catch (e) {
         res.status(500).json({
-            message: 'Что-то пошло не так, попробуйте снова',
+            message: 'Something went wrong, please try again.',
         });
     }
 });
@@ -54,7 +54,7 @@ router.get('/:id', auth, async (req, res) => {
         res.json(link);
     } catch (e) {
         res.status(500).json({
-            message: 'Что-то пошло не так, попробуйте снова',
+            message: 'Something went wrong, please try again.',
         });
     }
 });
