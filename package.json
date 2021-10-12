@@ -4,10 +4,12 @@
   "description": "Mern stack",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
     "client": "yarn --cwd client start",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn server\" \"yarn client\"",
+    "client:install": "yarn --cwd client",
+    "client:build": "yarn --cwd client build"
   },
   "keywords": [
     "mern",
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.13"
   }
 }
