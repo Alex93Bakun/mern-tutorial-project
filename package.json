@@ -31,11 +31,11 @@
     "express-validator": "^6.12.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.10",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
     "concurrently": "^6.3.0",
-    "cross-env": "^7.0.3",
     "nodemon": "^2.0.13"
   }
 }
